@@ -1,5 +1,8 @@
 <?php 
+require_once __DIR__ . "/ProductSpecifics.php";
 class User {
+    use ProductSpecifics;
+
     public $name;
     public $email;
     public $registered;
@@ -13,7 +16,11 @@ class User {
     }
 
     public function addProductToCart($product) {
-        $this->cart[] = $product;
+        if ($this->C€ == true) {
+            $this->cart[] = $product;
+        } else {
+            throw new Exception("Prodotto privo di Certificato Europeo inserire comunque nel carrello?");
+        }
     }
 
     public function getPrice() {

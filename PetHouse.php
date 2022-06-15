@@ -1,6 +1,10 @@
 <?php 
 require_once __DIR__ . "/PetHouse.php";
+require_once __DIR__ . "/ProductSpecifics.php";
+
 class PetHouse extends Product {
+    use ProductSpecifics;
+
     public $dimensions;
     public $outdoor_or_indoor;
 

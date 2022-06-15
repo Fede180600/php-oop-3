@@ -1,6 +1,9 @@
 <?php 
 require_once __DIR__ . "/Product.php";
+require_once __DIR__ . "/ProductSpecifics.php";
 class Food extends Product {
+    use ProductSpecifics;
+
     public $flavour;
     public $cat_or_dog;
     public $pet_age;

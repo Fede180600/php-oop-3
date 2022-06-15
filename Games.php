@@ -1,6 +1,10 @@
 <?php 
 require_once __DIR__ . "/Product.php";
+require_once __DIR__ . "/ProductSpecifics.php";
+
 class Games extends Product {
+    use ProductSpecifics;
+
     public $materials;
     public $pet_size_recommendation;
 
